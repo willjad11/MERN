@@ -1,0 +1,9 @@
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: lightcoral;
+    height: 560px;
+    flex: auto;
+    margin-left: 20px;
+}
