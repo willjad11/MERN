@@ -1,0 +1,23 @@
+.userform {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    border-radius: 15px;
+}
+
+.userform > * {
+    margin: 10px;
+}
+
+.label {
+    font-weight: bolder;
+}
+
+.input {
+    display: flex;
+    margin: 0px auto;
+}
+
+.warning {
+    color: red;
+}

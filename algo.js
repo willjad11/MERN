@@ -86,3 +86,65 @@
 //             mergeSort(arr.slice(Math.floor(arr.length / 2)))
 //         );
 // console.log(mergeSort(arr1.concat(arr2)));
+
+//QUICK SORT
+// let arr = [3, 5, 2, 9, 1, 7, 4, 6, 8];
+// function quickSort(arr) {
+//     var pivot = arr[0];
+//     var left = [];
+//     var right = [];
+//     if (arr.length <= 1) {
+//         return arr;
+//     }
+//     for (var i = 1; i < arr.length; i++) {
+//         if (arr[i] < pivot) {
+//             left.push(arr[i])
+//         }
+//         else {
+//             right.push(arr[i]);
+//         }
+//     }
+//     return quickSort(left).concat(pivot, quickSort(right));
+// };
+// console.log(quickSort(arr))
+
+//RECURSIVE PARTITIONING
+// let arr = [3, 8, 2, 9, 1, 7, 4, 6, 0, 5];
+// function partition(arr, left = [], right = [], i = 0, pivot = arr[arr.length - 1]) {
+//     if (arr[i] < pivot) {
+//         left.push(arr[i]);
+//     }
+//     if (arr[i] > pivot){
+//         right.push(arr[i])
+//     }
+//     if (i == arr.length - 1) {
+//         console.log("Pivot: " + pivot)
+//         console.log("Pivot Index: " + (arr.length - 1))
+//         console.log(left.concat(pivot, right));
+//         return left.concat(pivot, right);
+//     }
+//     else {
+//         partition(arr, left, right, i + 1, pivot)
+//     }
+// }
+// partition(arr)
+
+// ORDERED INTERSECTION
+// const numsA1 = [0, 1, 2, 2, 2, 7];
+// const numsB1 = [2, 2, 6, 6, 7];
+// const numsA2 = [0, 1, 2, 2, 2, 7];
+// const numsB2 = [2, 2];
+// const numsA3 = [0, 1, 2, 2, 2, 7];
+// const numsB3 = [10];
+// function intersection (arr1, arr2) {
+//     let newArr = [];
+//     for (let i = 0; i < arr2.length; i++) {
+//         if (arr1.indexOf(arr2[i]) != -1 && newArr.indexOf(arr2[i]) == -1) {
+//             newArr.push(arr2[i]);
+//         }
+//     }
+//     console.log(newArr);
+// }
+// intersection(numsA1, numsB1)
+// intersection(numsA2, numsB2)
+// intersection(numsA3, numsB3)
