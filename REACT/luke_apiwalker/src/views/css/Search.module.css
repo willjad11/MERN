@@ -1,0 +1,18 @@
+.searchdiv {
+    display: flex;
+    height: 20px;
+    align-items: center;
+    margin: 20px;
+}
+.searchdiv > * {
+    margin-right: 15px;
+}
+
+.searchinput {
+    width: 15px;
+}
+
+.notfound img{
+    width: 300px;
+    height: 200px;
+}
