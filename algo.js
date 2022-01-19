@@ -148,3 +148,27 @@
 // intersection(numsA1, numsB1)
 // intersection(numsA2, numsB2)
 // intersection(numsA3, numsB3)
+// const squareMatrix1 = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [9, 8, 9],
+// ];
+// const squareMatrix2 = [
+//     [1, 2, 3, 4, 5],
+//     [1, 2, 3, 4, 5],
+//     [1, 2, 3, 4, 5],
+//     [1, 2, 3, 4, 5],
+//     [1, 2, 3, 4, 5],
+// ];
+// function diagonalDifference(sqrMatrix) {
+//     let leftToRight = 0;
+//     let rightToLeft = 0;
+//     for (let i = 0; i < sqrMatrix.length; i++) {
+//         leftToRight += sqrMatrix[i][i];
+//         rightToLeft += sqrMatrix[i][sqrMatrix.length - 1 - i];
+//     }
+//     console.log(rightToLeft - leftToRight)
+//     return leftToRight - rightToLeft;
+// }
+// diagonalDifference(squareMatrix1)
+// diagonalDifference(squareMatrix2)
