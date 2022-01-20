@@ -172,3 +172,55 @@
 // }
 // diagonalDifference(squareMatrix1)
 // diagonalDifference(squareMatrix2)
+
+// TWO SUMS
+// const nums1 = [2, 11, 7, 15];
+// const targetSum1 = 9;
+// const nums2 = [10, 3, 2, 5, 4, -1];
+// const targetSum2 = 6;
+// const nums3 = [3, 8, 4, 1, 9, -2, 0];
+// const targetSum3 = 6;
+// function twoSum(nums, targetSum) {
+//     for (let i = 0; i < nums.length; i++) {
+//         for (let j = nums.length - 1; j >= 0; j--) {
+//             if (nums[i] + nums[j] == targetSum && j != i) {
+//                 console.log([i, j]);
+//                 return [i, j];
+//             }
+//         }
+//     }
+// }
+// twoSum(nums1, targetSum1)
+// twoSum(nums2, targetSum2)
+// twoSum(nums3, targetSum3)
+
+// K MOST FREQUENT
+// const nums4 = [1, 2, 1, 2, 3, 1];
+// const k4 = 2;
+// const nums5 = [3, 2, 0, 2, 0, 0];
+// const k5 = 1;
+// const nums6 = [1, 2, 3, 2, 1, 3];
+// const k6 = 3;
+// function kMostFrequent(nums, k) {
+//     numTracker = {};
+//     output = [];
+//     for (let i = 0; i < nums.length; i++) {
+//         numTracker[nums[i]] = nums.filter(num => num == nums[i]).length;
+//     }
+//     while (output.length < k) {
+//         let max = 0;
+//         let num = 0;
+//         for (const number in numTracker) {
+//             if (output.indexOf(number) == -1 && numTracker[number] > max) {
+//                 max = numTracker[number];
+//                 num = number;
+//             }
+//         }
+//         output.push(num);
+//     }
+//     console.log(output.map(Number));
+//     return output.map(Number);
+// }
+// kMostFrequent(nums4, k4)
+// kMostFrequent(nums5, k5)
+// kMostFrequent(nums6, k6)
