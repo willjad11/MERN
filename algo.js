@@ -148,6 +148,8 @@
 // intersection(numsA1, numsB1)
 // intersection(numsA2, numsB2)
 // intersection(numsA3, numsB3)
+
+// DIAGONAL DIFFERENCE
 // const squareMatrix1 = [
 //     [1, 2, 3],
 //     [4, 5, 6],
