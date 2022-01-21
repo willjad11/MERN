@@ -233,7 +233,6 @@
 // const riverLevels5 = [5, 1];
 // const riverLevels6 = [9, 7, 7, 7];
 // const riverLevels7 = [42];
-
 // function measureWaterLevels(waterLevels) {
 //     let maxRise = -1;
 //     for (let i = 0; i < waterLevels.length; i++) {
@@ -251,7 +250,6 @@
 //     console.log(maxRise);
 //     return maxRise;
 // }
-
 // measureWaterLevels(riverLevels1)
 // measureWaterLevels(riverLevels2)
 // measureWaterLevels(riverLevels3)
