@@ -226,36 +226,36 @@
 // kMostFrequent(nums6, k6)
 
 //MEASURE WATER LEVELS
-const riverLevels1 = [15, 17, 30];
-const riverLevels2 = [15, 17, 30, 14, 5, 16, 25, 9, 3];
-const riverLevels3 = [21, 18, 10, 11, 14, 9, 5, 13, 15, 7, 1, 6, 12, 4];
-const riverLevels4 = [1, 5];
-const riverLevels5 = [5, 1];
-const riverLevels6 = [9, 7, 7, 7];
-const riverLevels7 = [42];
+// const riverLevels1 = [15, 17, 30];
+// const riverLevels2 = [15, 17, 30, 14, 5, 16, 25, 9, 3];
+// const riverLevels3 = [21, 18, 10, 11, 14, 9, 5, 13, 15, 7, 1, 6, 12, 4];
+// const riverLevels4 = [1, 5];
+// const riverLevels5 = [5, 1];
+// const riverLevels6 = [9, 7, 7, 7];
+// const riverLevels7 = [42];
 
-function measureWaterLevels(waterLevels) {
-    let maxRise = -1;
-    for (let i = 0; i < waterLevels.length; i++) {
-        if (waterLevels[i] > waterLevels[i - 1]) {
-            for (let j = i - 1; j >= 0; j--) {
-                if (waterLevels[i] - waterLevels[j] > maxRise) {
-                    maxRise = waterLevels[i] - waterLevels[j];
-                }
-                if (waterLevels[j - 1] > waterLevels[j]) {
-                    break;
-                }
-            }
-        }
-    }
-    console.log(maxRise);
-    return maxRise;
-}
+// function measureWaterLevels(waterLevels) {
+//     let maxRise = -1;
+//     for (let i = 0; i < waterLevels.length; i++) {
+//         if (waterLevels[i] > waterLevels[i - 1]) {
+//             for (let j = i - 1; j >= 0; j--) {
+//                 if (waterLevels[i] - waterLevels[j] > maxRise) {
+//                     maxRise = waterLevels[i] - waterLevels[j];
+//                 }
+//                 if (waterLevels[j - 1] > waterLevels[j]) {
+//                     break;
+//                 }
+//             }
+//         }
+//     }
+//     console.log(maxRise);
+//     return maxRise;
+// }
 
-measureWaterLevels(riverLevels1)
-measureWaterLevels(riverLevels2)
-measureWaterLevels(riverLevels3)
-measureWaterLevels(riverLevels4)
-measureWaterLevels(riverLevels5)
-measureWaterLevels(riverLevels6)
-measureWaterLevels(riverLevels7)
+// measureWaterLevels(riverLevels1)
+// measureWaterLevels(riverLevels2)
+// measureWaterLevels(riverLevels3)
+// measureWaterLevels(riverLevels4)
+// measureWaterLevels(riverLevels5)
+// measureWaterLevels(riverLevels6)
+// measureWaterLevels(riverLevels7)
