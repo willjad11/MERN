@@ -1,0 +1,54 @@
+.form, .listcont, .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+.label {
+    color: gray;
+    font-weight: bolder;
+}
+
+.submit {
+    background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+}
+
+.submit:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+
+.submit:active {
+	position:relative;
+	top:1px;
+}
+
+.listitem {
+	width: 250px;
+	display: flex;
+	justify-content: space-between;
+	margin: 5px;
+}
+
+.button {
+	margin-left: 10px;
+}

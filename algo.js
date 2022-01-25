@@ -259,3 +259,44 @@
 // measureWaterLevels(riverLevels5)
 // measureWaterLevels(riverLevels6)
 // measureWaterLevels(riverLevels7)
+
+//OBJECT ENTRIES
+// const obj1 = {
+//     name: "Pizza",
+//     calories: 9001,
+// };
+// const proto = { inheritance: "inherited key", keyOnProto: "val from proto" };
+// const obj2 = Object.assign(Object.create(proto), {
+//     firstName: "Foo",
+//     lastName: "Bar",
+//     age: 13,
+// });
+// function entries(obj) {
+//     const keys = Object.keys(obj);
+//     const output = [];
+//     for (let i = 0; i < keys.length; i++) {
+//         output.push([keys[i], obj[keys[i]]]);
+//     }
+//     console.log(output);
+//     return output;
+// }
+// entries(obj1)
+// entries(obj2)
+
+//TABLE INSERT
+// const table = "users";
+// const insertData1 = { first_name: "John", last_name: "Doe" };
+// const insertData2 = {
+//     first_name: "John",
+//     last_name: "Doe",
+//     age: 30,
+//     is_admin: false,
+// };
+// function insert(tableName, columnValuePairs) {
+//     const str1 = Object.keys(columnValuePairs).join(", ");
+//     const str2 = Object.values(columnValuePairs).join(", ");
+//     console.log(`INSERT INTO ${tableName} (${str1}) VALUES (${str2})`)
+//     return `INSERT INTO ${tableName} (${str1}) VALUES (${str2})`
+// }
+// insert(table, insertData1)
+// insert(table, insertData2)
