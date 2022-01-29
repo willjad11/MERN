@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { useParams, useHistory, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styles from '../components/css/ProductManager.module.css';
 
 const Detail = () => {
     const [product, setProduct] = useState({})
     const { id } = useParams();
-    const history = useHistory();
 
     useEffect(() => {
         axios.get('http://localhost:8000/api/product/' + id)
@@ -17,7 +16,7 @@ const Detail = () => {
     const deleteProduct = (id) => {
         axios.delete('http://localhost:8000/api/product/' + id)
         .then(res => {
-            history.push(`/`)
+            console.log(res)
         })
         .catch(err => console.error(err));
     }
@@ -27,9 +26,9 @@ const Detail = () => {
             <h1>{product.title}</h1>
             <p>Price: ${product.price}</p>
             <p>Description: {product.description}</p>
-            <Link to={`/product/${product._id}/edit`}>Edit</Link>
-            <button onClick={() => deleteProduct(product._id)}>Delete</button>
-            <Link to="/">Back</Link>
+            <a href={`/product/${product._id}/edit`}>Edit</a>
+            <a href="/" onClick={() => deleteProduct(product._id)}>Delete</a>
+            <a href="/api/products">Back</a>
         </div>
     )
 }

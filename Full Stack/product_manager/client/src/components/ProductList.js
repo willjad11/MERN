@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 import styles from './css/ProductManager.module.css';
 
 const ProductList = (props) => {
-    const { removeFromDom } = props;
+    const { removeFromDom, products } = props;
 
     const deleteProduct = (id) => {
         axios.delete('http://localhost:8000/api/product/' + id)
@@ -16,12 +17,14 @@ const ProductList = (props) => {
     return (
         <div className={styles.listcont}>
             <h1>All Products:</h1>
-            {props.products.map((product, i) =>
+            {products 
+            ? products.map((product, i) =>
                 <div key={i} className={styles.listitem}>
-                    <a href={`/api/product/${product._id}`}>{product.title}</a>
+                    <Link to={`/product/${product._id}`}>{product.title}</Link>
                     <button className={styles.button} onClick={(e) => { deleteProduct(product._id) }}>Delete</button>
-                </div>
-            )}
+                </div>)
+            : <i>No data to show</i>
+            }
         </div>
     )
 }

@@ -9,13 +9,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <Route path="/api/products/">
-            <Main />
-          </Route>
-          <Route path="/api/product/:id">
+          <Route exact path="/product/:id">
             <Detail />
           </Route>
-          <Route path="/product/:id/edit">
+          <Route exact path="/product/:id/edit">
             <Update />
           </Route>
           <Route exact path="/">

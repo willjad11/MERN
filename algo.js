@@ -300,3 +300,134 @@
 // }
 // insert(table, insertData1)
 // insert(table, insertData2)
+
+//FIND OBJECTS
+// const users = [
+//     { firstName: "Bob", lastName: "Bobbert", age: 31 },
+//     { firstName: "John", lastName: "Smith", age: 25 },
+//     { firstName: "Bob", lastName: "Smith", age: 27 },
+//     { firstName: "Bob", lastName: "White", age: 31 },
+// ];
+// const searchCriteria1 = {
+//     firstName: "Bob",
+//     age: 31,
+// };
+// const searchCriteria2 = {
+//     lastName: "Smith",
+// };
+// function findObjects(criteria, collection) {
+//     let output = [];
+//     for (obj in collection) {
+//         let count = 0;
+//         for (crit in criteria) {
+//             if (criteria[crit] == collection[obj][crit]) {
+//                 count += 1;
+//             }
+//             if (count == Object.keys(criteria).length) {
+//                 output.push(collection[obj])
+//             }
+//         }
+//     }
+//     if (output == []) {
+//         console.log("No results");
+//         return false;
+//     }
+//     else {
+//         console.log(output);
+//         return output;
+//     }
+// }
+// findObjects(searchCriteria1, users)
+// findObjects(searchCriteria2, users)
+
+// SEARCH BY
+// const people = [
+//     { firstName: "John", lastName: "Doe" },
+//     { firstName: "Jane", lastName: "Doe" },
+//     { firstName: "Eddy", lastName: "Lee" },
+//     { firstName: "John", lastName: "Fawn" },
+//     { firstName: "Edward", lastName: "Kim" }
+// ];
+// const searchFor1 = "Jo";
+// const searchBy1 = "firstName";
+// const searchFor2 = "ohn";
+// const searchBy2 = "firstName";
+// const searchFor3 = "Do";
+// const searchBy3 = "lastName";
+// const searchFor4 = "E";
+// const searchBy4 = "lastName";
+// const searchMethod4 = "includes";
+// function filterByKey(items, searchFor, searchBy, searchMethod="startsWith") {
+//     let output = [];
+//     if (searchMethod == "startsWith") {
+//         for (person in items) {
+//             if (items[person][searchBy].startsWith(searchFor)) {
+//                 output.push(items[person])
+//             }
+//         }
+//     }
+//     if (searchMethod == "endsWith") {
+//         for (person in items) {
+//             if (items[person][searchBy].endsWith(searchFor)) {
+//                 output.push(items[person])
+//             }
+//         }
+//     }
+//     if (searchMethod == "includes") {
+//         for (person in items) {
+//             if (items[person][searchBy].indexOf(searchFor.toLowerCase()) != -1) {
+//                 output.push(items[person])
+//             }
+//         }
+//     }
+//     console.log(output)
+//     return output;
+// }
+// filterByKey(people, searchFor1, searchBy1)
+// filterByKey(people, searchFor2, searchBy2)
+// filterByKey(people, searchFor3, searchBy3)
+// filterByKey(people, searchFor4, searchBy4, searchMethod4)
+
+//SEARCH NESTED ARRAY
+// const students = [
+//     {
+//         firstName: "Jane",
+//         lastName: "Doe",
+//         habits: [
+//             "doesn't wash dishes",
+//             "falls asleep in lecture",
+//             "shows up early",
+//         ],
+//     },
+//     {
+//         firstName: "John",
+//         lastName: "Smith",
+//         habits: ["shows up late", "washes dishes", "helps peers"],
+//     },
+//     {
+//         firstName: "Arya",
+//         lastName: "Stark",
+//         habits: ["doesn't wash dishes", "hoards snacks", "shows up late"],
+//     },
+//     {
+//         firstName: "Jon",
+//         lastName: "Snow",
+//         habits: ["shows up early", "helps peers", "washes dishes"],
+//     },
+// ];
+// const badHabit1 = "doesn't wash dishes";
+// const badHabit2 = "shows up late";
+// const badHabit3 = "different naming for variables";
+// function santasNaughtyList(persons, badHabit) {
+//     let output = [];
+//     for (student of persons) {
+//         if (student.habits.includes(badHabit)) {
+//             output.push([student.firstName, student.lastName].join(" "));
+//         }
+//     }
+//     console.log(output);
+//     return output;
+// }
+// santasNaughtyList(students, badHabit1)
+// santasNaughtyList(students, badHabit2)
+// santasNaughtyList(students, badHabit3)
