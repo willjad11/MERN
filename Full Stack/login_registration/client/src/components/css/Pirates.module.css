@@ -1,0 +1,38 @@
+.loginPageCont {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 25% 25%;
+}
+
+.registerForm, .loginForm {
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 15px;;
+    padding: 10px;
+}
+
+.registerForm > *, .loginForm > * {
+    display: flex;
+    justify-content: space-between !important;
+}
+
+.registerForm > h1, .loginForm > h1 {
+    margin: 0px auto;
+    padding-bottom: 20px;
+}
+
+.registerForm > input, .loginForm > input {
+    margin: 20px auto;
+}
+
+.input > input {
+    width: 150px;
+    height: 15px;
+}
+
+.button {
+    background-color: grey;
+}

@@ -431,3 +431,226 @@
 // santasNaughtyList(students, badHabit1)
 // santasNaughtyList(students, badHabit2)
 // santasNaughtyList(students, badHabit3)
+
+// PALINDROME FINDER
+// const str1 = "";
+// const str2 = "a";
+// const str3 = "ddaa";
+// const str4 = "dda";
+// const str5 = "aaadd";
+// const str6 = "abc";
+// function canStringBecomePalindrome(str) {
+//     if (str.length == 0) {
+//         console.log(false);
+//         return false;
+//     }
+//     else if (str.length == 1) {
+//         console.log(true);
+//         return true;
+//     }
+//     else {
+//         let strCopy = str.split("");
+//         for (let i = 0; i < strCopy.length; i++) {
+//             if (strCopy.join("") == strCopy.reverse().join("")) {
+//                 console.log(true);
+//                 return true;
+//             }
+//             else {
+//                 const newChar = strCopy.shift();
+//                 strCopy.push(newChar)
+//             }
+//         }
+//     }
+//     console.log(false);
+//     return false;
+// }
+// canStringBecomePalindrome(str1)
+// canStringBecomePalindrome(str2)
+// canStringBecomePalindrome(str3)
+// canStringBecomePalindrome(str4)
+// canStringBecomePalindrome(str5)
+// canStringBecomePalindrome(str6)
+
+// HASH TABLES
+// const objects = [
+//     {
+//         name: "Receving red packets",
+//         category: "fun",
+//     },
+//     {
+//         name: "Turnip Cake",
+//         category: "yummy",
+//     },
+//     {
+//         name: "Having never-ending feasts",
+//         category: "fun",
+//     },
+//     {
+//         name: "Everyone asks you for money",
+//         category: "Not fun",
+//     },
+//     {
+//         name: "Rice Cake",
+//         category: "yummy",
+//     },
+//     {
+//         name: "Ate too much unhealthy food",
+//         category: "Not fun",
+//     },
+// ];
+// function groupObjects(items) {
+//     let output = {};
+//     for (let i = 0; i < items.length; i++) {
+//         if (!output[items[i].category]) {
+//             output[items[i].category] = [items[i]];
+//         }
+//         else {
+//             output[items[i].category].push(items[i]);
+//         }
+//     }
+//     console.log(output)
+//     return output;
+// }
+// groupObjects(objects)
+
+// REHASH
+// const str1 = "b70a164c32a20c10";
+// function rehash(s) {
+//     let output = {};
+//     let num = "";
+//     let letterIndex = 0;
+//     let sortedOutput = "";
+//     s.split("")
+//     .forEach(function (item, index, array) {
+//         if (isNaN(item)) {
+//             !output[item] && (output[item] = 0);
+//             num != "" && (output[array[letterIndex]] = output[array[letterIndex]] += parseInt(num));
+//             num = "";
+//             letterIndex != index && (letterIndex = index);
+//         }
+//         if (!isNaN(item)) {
+//             num += item;
+//         }
+//         if (index == array.length - 1) {
+//             output[array[letterIndex]] = output[array[letterIndex]] += parseInt(num)
+//         }
+//     });
+//     Object.keys(output)
+//         .sort()
+//         .map(key => {
+//             sortedOutput += key += output[key]
+//             });
+//     console.log(sortedOutput)
+//     return sortedOutput;
+// }
+// rehash(str1)
+
+// CONSTRUCTING ONE FROM THE OTHER
+// const strA1 = "Hello World";
+// const strB1 = "lloeh wordl";
+// const strA2 = "Hey";
+// const strB2 = "hello";
+// const strA3 = "hello";
+// const strB3 = "helo";
+// const strA4 = "hello";
+// const strB4 = "lllheo";
+// const strA5 = "hello";
+// const strB5 = "heloxyz";
+// function canBuildS1FromS2(s1, s2) {
+//     firstString = s1.split("");
+//     secondString = s2.split("");
+//     for (let i = 0; i < firstString.length; i++) {
+//         if (firstString.filter(x => x == firstString[i] || x == firstString[i].toLowerCase()).length 
+//             > secondString.filter(x => x == firstString[i] || x == firstString[i].toLowerCase()).length) {
+//             console.log(false)
+//             return false;
+//         }
+//     }
+//     console.log(true)
+//     return true;
+// }
+// canBuildS1FromS2(strA1, strB1)
+// canBuildS1FromS2(strA2, strB2)
+// canBuildS1FromS2(strA3, strB3)
+// canBuildS1FromS2(strA4, strB4)
+// canBuildS1FromS2(strA5, strB5)
+
+// VERSION NUMBER COMPARISON
+// const test1V1 = "0.1";
+// const test1V2 = "1.1";
+// const test2V1 = "1.0.1";
+// const test2V2 = "1";
+// const test3V1 = "7.5.2.4";
+// const test3V2 = "7.5.3";
+// const test4V1 = "7.5.2.4";
+// const test4V2 = "7.5.2";
+// const test5V1 = "1.01";
+// const test5V2 = "1.001";
+// const test6V1 = "1.0.1";
+// const test6V2 = "1";
+// function compareVersionNumbers(v1, v2) {
+//     v1Count = v1.split("")
+//                 .filter(x => x != ".")
+//                 .join("")
+//                 .replace('00', '0');
+//     v2Count = v2.split("")
+//                 .filter(x => x != ".")
+//                 .join("")
+//                 .replace('00', '0')
+//     if (v1Count > v2Count) {
+//         console.log(1)
+//         return 1
+//     }
+//     else if (v1Count < v2Count) {
+//         console.log(-1)
+//         return -1
+//     }
+//     else {
+//         console.log(0)
+//         return 0;
+//     }
+// }
+// compareVersionNumbers(test1V1, test1V2)
+// compareVersionNumbers(test2V1, test2V2)
+// compareVersionNumbers(test3V1, test3V2)
+// compareVersionNumbers(test4V1, test4V2)
+// compareVersionNumbers(test5V1, test5V2)
+// compareVersionNumbers(test6V1, test6V2)
+
+// MAX SERVINGS
+// const recipe1 = {
+//     "organic fat": 99,
+//     "live squid": 1,
+//     "birds nest": 1,
+//     "fried flesh": 1,
+//     spicy: 5,
+//     "gourmet memes": 4200,
+// };
+// const available1 = {
+//     "organic fat": 990,
+//     "live squid": 1,
+//     "birds nest": 10,
+//     "fried flesh": 10,
+//     spicy: 50,
+//     "gourmet memes": 42000,
+//     sugar: 9001,
+//     spice: 5,
+//     "everything nice": 1,
+//     "triple point water": 5,
+// };
+// const available2 = { ...available1, ["live squid"]: 10 };
+// const available3 = { ...available1 };
+// delete available3["live squid"];
+// function getMaxServings(recipe, available) {
+//     let servings = [];
+//     for (ingredient of Object.keys(recipe)) {
+//         available.hasOwnProperty(ingredient) ?
+//             servings.push(Math.floor(available[ingredient] / recipe[ingredient])) :
+//                 servings.push(0);
+//     }
+//     console.log(Math.min(...servings));
+//     return Math.min(...servings);
+// }
+// getMaxServings(recipe1, available1)
+// getMaxServings(recipe1, available2)
+// getMaxServings(recipe1, available3)
